@@ -1,0 +1,37 @@
+/*
+.path-mod-resource .resourcecontent {
+    text-align: center;
+}
+
+.path-mod-resource .resourcedetails {
+    font-size: 0.8em;
+    color: #555;
+}
+
+.resourcelinkdetails {
+    font-size: 0.8em;
+    color: #555;
+}
+*/
+.interact-zip {
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+}
+.viewport.interact-zip {
+    max-width: none;
+    -webkit-transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    -ms-transform: scale(1);
+    -ms-transform-origin: 0 0;
+}
+.interact-zip_wrapper {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+iframe {
+    border-width: 0;
+}
