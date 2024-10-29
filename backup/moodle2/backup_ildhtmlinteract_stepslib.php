@@ -20,6 +20,7 @@
  *
  * @package    mod_resource
  * @copyright  2010 onwards Eloy Lafuente (stronk7) {@link http://stronk7.com}
+ * @copyright  2024 Tina John (tina.john@th-luebeck.de)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -39,7 +40,7 @@ class backup_ildhtmlinteract_activity_structure_step extends backup_activity_str
         $resource = new backup_nested_element('ildhtmlinteract', array('id'), array(
             'name', 'intro', 'introformat', 'tobemigrated',
             'legacyfiles', 'legacyfileslast', 'display',
-            'displayoptions', 'filterfiles', 'revision', 'timemodified'));
+            'displayoptions', 'filterfiles', 'revision', 'timemodified','framewidth','frameheight'));
 
         // Build the tree
         // (love this)

@@ -19,6 +19,7 @@
  * @package    mod_resource
  * @subpackage backup-moodle2
  * @copyright 2010 onwards Eloy Lafuente (stronk7) {@link http://stronk7.com}
+ * @copyright 2024 Tina John (tina.john@th-luebeck.de)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -40,12 +41,18 @@ class restore_ildhtmlinteract_activity_structure_step extends restore_activity_s
         return $this->prepare_activity_structure($paths);
     }
 
-    protected function process_resource($data) {
+    protected function process_ildhtmlinteract($data) {
         global $DB;
 
         $data = (object)$data;
         $oldid = $data->id;
         $data->course = $this->get_courseid();
+       
+        if (!isset($data->frameheight)) {
+            // Export missed framewidth and frameheight in previous version - set default values.
+            $data->framewidth = 680;
+            $data->frameheight = 800;
+        }        
 
         // Any changes to the list of dates that needs to be rolled should be same during course restore and course reset.
         // See MDL-9367.
